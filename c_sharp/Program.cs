@@ -6,13 +6,13 @@ string[] resultArray = FilterArray(inputArray);
 Console.WriteLine("Результат:");
 PrintArray(inputArray, resultArray);
 
-static string[] EnterArray()
+string[] EnterArray()
 {
     string input = Console.ReadLine();
     return input.Split(',');
 }
 
-static string[] FilterArray(string[] inputArray)
+string[] FilterArray(string[] inputArray)
 {
     int count = 0;
     for (int i = 0; i < inputArray.Length; i++)
@@ -37,7 +37,7 @@ static string[] FilterArray(string[] inputArray)
     return resultArray;
 }
 
-static void PrintArray(string[] inputArray, string[] resultArray)
+void PrintArray(string[] inputArray, string[] resultArray)
 {
     Console.Write("[" + string.Join(", ", inputArray) + "] -> ");
     Console.WriteLine("[" + string.Join(", ", resultArray) + "]");
